@@ -40,7 +40,13 @@
                 <label for="task-due-date">Due Date:</label>
                 <input type="date" class="form-control" id="task-due-date">
             </div>
+            <div class="form-group">
+                <label for="task-assignee">Assign To:</label>
+                <input type="text" class="form-control" id="task-assignee">
+            </div>
             <button type="submit" class="btn btn-primary">Create Task</button>
+            <button onclick="goToSecondPage()">Go to Second Page</button>
+
         </form>
     </main>
     <footer class="bg-dark text-light text-center py-3">
@@ -48,6 +54,6 @@
             <p>&copy; 2023 TaskMaster</p>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js"></script> 
 </body>
 </html>
