@@ -1,27 +1,42 @@
+
+.col{
+    
+    height: 200px;
+}
+.row{
+ 
+    height: 800px;
+}
+
+
 header {
-    background-color: #007bff;
-    color: #fff;
+    border: 8px solid #d33376;
+    background-color: rgb(55 12 57);
+    color: #a6bfd7;
     padding: 20px 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
 }
 footer {
-    background-color: #333;
+    border: 8px solid #a6bfd7;
+    background-color: rgb(55 12 57);
     color: #fff;
     padding: 10px 0;
 }
 #task-list {
-    background-color: #f9f9f9;
+    background-color: #cb5c5c8a;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid rgb(115 49,1);
     border-radius: 5px;
 }
 #task-form {
-    background-color: #fff;
+    background-color: #cb5c5c8a;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid rgb(115 49,1);
     border-radius: 5px;
 }
 .task-item {
-    background-color: #fff;
+    background-color: #c5abab;
     padding: 20px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
@@ -34,7 +49,8 @@ img.img-fluid {
 }
 
 body {
-    background-image: url('Background.png');  
+    border: 6px solid #d33376;
+    background-color:rgb(191 154 160); 
     background-size: cover; 
     background-repeat: no-repeat; 
 }

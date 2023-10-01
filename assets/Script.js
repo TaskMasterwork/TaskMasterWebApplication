@@ -26,13 +26,13 @@ function displayTasks() {
             <p><strong>Status:</strong> ${task.status}</p>
             <p><strong>Assignee:</strong> ${task.assignee || "Unassigned"}</p>
             <button onclick="assignTask(${task.id})">Assign</button>
-            <button onclick="updateStatus(${task.id})">Update Status</button>`;
+            <button onclick="updateStatus(${task.id})">Update Status</button> `;
+
         const currentDate = new Date();
         const dueDate = task.dueDate ? new Date(task.dueDate) : null;
         if (dueDate && dueDate < currentDate) {
             taskItem.innerHTML += `<p class="text-danger">Overdue!</p>`;
         }
-
         taskList.appendChild(taskItem);
     }
 }
