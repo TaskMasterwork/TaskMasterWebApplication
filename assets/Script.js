@@ -1,11 +1,13 @@
 const tasks = [];
-function createTask(title, description, priority) {
+
+function createTask(title, description, priority, dueDate) {
     const task = {
         id: tasks.length + 1,
         title: title,
         description: description,
         priority: priority,
-        assignedTo: null, 
+        dueDate: dueDate,
+        assignedTo: null,
         status: "To Do"
     };
     tasks.push(task);
@@ -21,41 +23,12 @@ function displayTasks() {
             <h3>${task.title}</h3>
             <p>${task.description}</p>
             <p><strong>Priority:</strong> ${task.priority}</p>
+            <p><strong>Due Date:</strong> ${task.dueDate || "Not set"}</p>
             <p><strong>Status:</strong> ${task.status}</p>
             <p><strong>Assigned To:</strong> ${task.assignedTo || "Unassigned"}</p>
             <button onclick="assignTask(${task.id})">Assign</button>
-            <button onclick="updateStatus(${task.id})">Update Status</button>
-            <button onclick="prioritizeTask(${task.id})">Prioritize</button>`;
+            <button onclick="updateStatus(${task.id})">Update Status</button>`;
         taskList.appendChild(taskItem);
-    }
-}
-function assignTask(taskId) {
-    const task = tasks.find(task => task.id === taskId);
-    if (task) {
-        const assignedTo = prompt("Assign this task to:");
-        if (assignedTo) {
-            task.assignedTo = assignedTo;
-            displayTasks();
-        }
-    }
-}
-
-function updateStatus(taskId) {
-    const task = tasks.find(task => task.id === taskId);
-    if (task) {
-        const status = prompt("Update task status to:");
-        if (status) {
-            task.status = status;
-            displayTasks();
-        }
-    }
-}
-
-function prioritizeTask(taskId) {
-    const task = tasks.find(task => task.id === taskId);
-    if (task) {
-        task.priority = "high"; 
-        displayTasks();
     }
 }
 document.getElementById("task-form").addEventListener("submit", function (e) {
@@ -63,8 +36,8 @@ document.getElementById("task-form").addEventListener("submit", function (e) {
     const title = document.getElementById("task-title").value;
     const description = document.getElementById("task-description").value;
     const priority = document.getElementById("task-priority").value;
-    createTask(title, description, priority);
+    const dueDate = document.getElementById("task-due-date").value;
+    createTask(title, description, priority, dueDate);
     document.getElementById("task-form").reset();
 });
-
 displayTasks();
