@@ -8,24 +8,19 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <!-- Header Section -->
+    <!--Header Section-->
     <header class="bg-primary text-light p-4">
         <div class="container">
             <h1 class="display-4">TaskMaster</h1>
         </div>
     </header>
-
-    <!-- Main Content Section -->
+    <!-- Main Section-->
     <main class="container my-4">
         <h2>Welcome to TaskMaster</h2>
         <p>Organize and manage your tasks effectively.</p>
-        
-        <!-- Task List -->
+        <!--Task List-->
         <div id="task-list">
-            <!-- Tasks will be displayed here -->
         </div>
-
-        <!-- Task Form -->
         <form id="task-form" class="my-4">
             <h3>Create a New Task</h3>
             <div class="form-group">
@@ -39,23 +34,19 @@
             <div class="form-group">
                 <label for="task-priority">Task Priority:</label>
                 <select class="form-control" id="task-priority" required>
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
+                    <option value="low">Urgent & important</option>
+                    <option value="medium">Important but not Urgent</option>
+                    <option value="high">Urgent but not important</option>
                 </select>
             </div>
             <button type="submit" class="btn btn-primary">Create Task</button>
         </form>
     </main>
-
-    <!-- Footer Section -->
     <footer class="bg-dark text-light text-center py-3">
         <div class="container">
             <p>&copy; 2023 TaskMaster</p>
         </div>
     </footer>
-
-    <!-- Include JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
