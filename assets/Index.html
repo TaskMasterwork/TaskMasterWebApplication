@@ -8,17 +8,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <!--Header Section-->
     <header class="bg-primary text-light p-4">
         <div class="container">
             <h1 class="display-4">TaskMaster</h1>
         </div>
     </header>
-    <!-- Main Section-->
     <main class="container my-4">
         <h2>Welcome to TaskMaster</h2>
         <p>Organize and manage your tasks effectively.</p>
-        <!--Task List-->
         <div id="task-list">
         </div>
         <form id="task-form" class="my-4">
@@ -34,10 +31,14 @@
             <div class="form-group">
                 <label for="task-priority">Task Priority:</label>
                 <select class="form-control" id="task-priority" required>
-                    <option value="low">Urgent & important</option>
-                    <option value="medium">Important but not Urgent</option>
-                    <option value="high">Urgent but not important</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
                 </select>
+            </div>
+            <div class="form-group">
+                <label for="task-due-date">Due Date:</label>
+                <input type="date" class="form-control" id="task-due-date">
             </div>
             <button type="submit" class="btn btn-primary">Create Task</button>
         </form>
